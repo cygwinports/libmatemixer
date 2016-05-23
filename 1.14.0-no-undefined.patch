@@ -1,0 +1,43 @@
+--- origsrc/libmatemixer-1.14.0/backends/alsa/Makefile.am	2016-04-05 05:56:42.000000000 -0500
++++ src/libmatemixer-1.14.0/backends/alsa/Makefile.am	2016-05-22 14:58:49.699185100 -0500
+@@ -38,6 +38,7 @@ libmatemixer_alsa_la_SOURCES =
+ 	alsa-types.h
+ 
+ libmatemixer_alsa_la_LIBADD =                                   \
++	$(top_builddir)/libmatemixer/libmatemixer.la		\
+ 	$(GLIB_LIBS)                                            \
+ 	$(ALSA_LIBS)
+ 
+--- origsrc/libmatemixer-1.14.0/backends/null/Makefile.am	2016-04-05 05:56:42.000000000 -0500
++++ src/libmatemixer-1.14.0/backends/null/Makefile.am	2016-05-22 14:59:42.639258200 -0500
+@@ -13,7 +13,9 @@ libmatemixer_null_la_SOURCES =
+ 	null-backend.c                                          \
+ 	null-backend.h
+ 
+-libmatemixer_null_la_LIBADD = $(GLIB_LIBS)
++libmatemixer_null_la_LIBADD =					\
++	$(top_builddir)/libmatemixer/libmatemixer.la		\
++	$(GLIB_LIBS)
+ 
+ libmatemixer_null_la_LDFLAGS =                                  \
+ 	-avoid-version                                          \
+--- origsrc/libmatemixer-1.14.0/backends/oss/Makefile.am	2016-04-05 05:56:42.000000000 -0500
++++ src/libmatemixer-1.14.0/backends/oss/Makefile.am	2016-05-22 14:59:49.899268200 -0500
+@@ -28,6 +28,7 @@ libmatemixer_oss_la_SOURCES =
+ 	oss-types.h
+ 
+ libmatemixer_oss_la_LIBADD =                                    \
++	$(top_builddir)/libmatemixer/libmatemixer.la		\
+ 	$(GLIB_LIBS)                                            \
+ 	$(OSS_LIBS)
+ 
+--- origsrc/libmatemixer-1.14.0/backends/pulse/Makefile.am	2016-04-05 05:56:42.000000000 -0500
++++ src/libmatemixer-1.14.0/backends/pulse/Makefile.am	2016-05-22 14:59:58.219279700 -0500
+@@ -58,6 +58,7 @@ libmatemixer_pulse_la_SOURCES =
+ 	pulse-types.h
+ 
+ libmatemixer_pulse_la_LIBADD =                                  \
++	$(top_builddir)/libmatemixer/libmatemixer.la		\
+ 	$(GLIB_LIBS)                                            \
+ 	$(PULSEAUDIO_LIBS)
+ 

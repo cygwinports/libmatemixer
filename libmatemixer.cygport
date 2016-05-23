@@ -1,14 +1,14 @@
 inherit mate
 
 NAME="libmatemixer"
-VERSION=1.10.0
+VERSION=1.14.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MATE audio mixer library"
 DESCRIPTION="MATE is a fork of the GNOME 2 desktop. It provides an intuitive
 and attractive desktop to Linux users using traditional metaphors."
 
-PATCH_URI="1.10.0-no-undefined.patch"
+PATCH_URI="1.14.0-no-undefined.patch"
 
 PKG_NAMES="libmatemixer0 libmatemixer-devel libmatemixer-doc"
 libmatemixer0_SUMMARY="${SUMMARY} (runtime)"
